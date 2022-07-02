@@ -175,15 +175,6 @@
     // --------------------------------------------------------------
     //
     // test if a specific minor diagonal on this board contains a conflict
-    /**
-       * [
-    [0, 0, 0, 1]
-    [0, 0, 1, 0]
-    [0, 1, 0, 1]
-    [1, 0, 1, 0] n
-    ];
-
-       */
 
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow, rowIndex) {
       var count = 0;
@@ -217,6 +208,19 @@
       }
       return false;
     }
+
+    /**   |||||||||||||||| TIME COMPLEXITY ||||||||||||||||
+     *
+     *    hasRowConflictAt:             O(n)
+     *    hasAnyRowConflicts:           O(n^2)
+     *    hasColConflictAt:             O(n)
+     *    hasAnyColConflicts:           O(n^2)
+     *    hasMajorDiagonalConflictAt:   O(n)
+     *    hasAnyMajorDiagonalConflicts: O(n^2)
+     *    hasMinorDiagonalConflictAt:   O(n)
+     *    hasAnyMinorDagonalConflicts:  O(n^2)
+     *
+     */
 
     /*--------------------  End of Helper Functions  ---------------------*/
 
